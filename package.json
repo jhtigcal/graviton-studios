@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@types/node": "20.6.2",
@@ -27,5 +28,8 @@
     "pnpm": ">=8.5.1",
     "yarn": "please-use-pnpm",
     "npm": "please-use-pnpm"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
   }
 }
