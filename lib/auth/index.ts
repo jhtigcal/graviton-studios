@@ -1,6 +1,6 @@
 import { db } from '@/lib/db';
-import { DrizzleAdapter } from '@auth/drizzle-adapter';
 import type { NextAuthOptions } from 'next-auth';
+import { DrizzleAdapter } from './drizzle-adapter';
 
 import DiscordProvider from 'next-auth/providers/discord';
 import EmailProvider from 'next-auth/providers/email';
