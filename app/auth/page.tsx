@@ -5,8 +5,14 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import UserAuthForm from '@/components/user-auth-form';
+import { getCurrentUser } from '@/lib/session';
+import { redirect } from 'next/navigation';
 
-function AuthPage() {
+async function AuthPage() {
+  const user = await getCurrentUser();
+
+  if (user) redirect('/dashboard');
+
   return (
     <div>
       <Card className="shadow-lg min-w-fit w-96 max-w-full">
