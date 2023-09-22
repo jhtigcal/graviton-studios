@@ -2,7 +2,11 @@ import { createId } from '@paralleldrive/cuid2';
 import { and, eq } from 'drizzle-orm';
 import type { PlanetScaleDatabase } from 'drizzle-orm/planetscale-serverless';
 import type { Adapter } from 'next-auth/adapters';
-import { accounts, sessions, users, verificationTokens } from '../db/schema';
+
+import { accounts } from '../db/schema/account';
+import { sessions } from '../db/schema/session';
+import { users } from '../db/schema/user';
+import { verificationTokens } from '../db/schema/verification-token';
 
 export function DrizzleAdapter(db: PlanetScaleDatabase): Adapter {
   return {
