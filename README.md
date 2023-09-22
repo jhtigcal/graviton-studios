@@ -15,3 +15,5 @@ Everything a college organization manager might need.
 - Drizzle ORM
 - PlanetScale Database
 - Next Auth
+- Shadcn/ui
+- React Hook Form
