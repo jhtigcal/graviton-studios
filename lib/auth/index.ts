@@ -5,8 +5,6 @@ import { DrizzleAdapter } from './drizzle-adapter';
 import DiscordProvider from 'next-auth/providers/discord';
 import EmailProvider from 'next-auth/providers/email';
 
-// import { sendVerificationRequest } from './helpers/send-verification-request';
-
 export const authOptions: NextAuthOptions = {
   adapter: DrizzleAdapter(db),
   session: {
@@ -31,7 +29,6 @@ export const authOptions: NextAuthOptions = {
         },
       },
       from: process.env.EMAIL_FROM,
-      // sendVerificationRequest,
     }),
   ],
 };

@@ -15,7 +15,7 @@ async function AuthPage() {
 
   return (
     <div>
-      <Card className="shadow-lg min-w-fit w-96 max-w-full">
+      <Card className="shadow-lg w-full">
         <CardHeader>
           <CardTitle>Sign in.</CardTitle>
           <CardDescription>

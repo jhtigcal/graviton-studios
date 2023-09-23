@@ -1,24 +1,18 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { signOut } from 'next-auth/react';
+import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 function DashboardPage() {
   return (
-    <div>
-      <Button
-        variant="secondary"
-        onClick={(event) => {
-          event.preventDefault();
-          signOut({
-            callbackUrl: `${window.location.origin}/auth`,
-          });
-        }}
-      >
-        Sign out
-      </Button>
-      This is some super secret content you must not see.
-    </div>
+    <>
+      <CardHeader>
+        <CardTitle>Dashboard</CardTitle>
+        <CardDescription>
+          Welcome to your dashboard. You are not supposed to see this content if
+          you are not properly authenticated.
+        </CardDescription>
+      </CardHeader>
+    </>
   );
 }
 
