@@ -1,3 +1,5 @@
+import Sidebar from '@/components/sidebar';
+import { Card } from '@/components/ui/card';
 import { getCurrentUser } from '@/lib/session';
 import { redirect } from 'next/navigation';
 import { ReactNode } from 'react';
@@ -11,5 +13,14 @@ export default async function ContentLayout({ children }: AuthLayoutProps) {
 
   if (!user) redirect('/auth');
 
-  return <div className="min-h-screen">{children}</div>;
+  return (
+    <div className="flex min-h-screen bg-background">
+      <Sidebar />
+      <main className="lg:m-2 grow w-full">
+        <Card className="h-full bg-primary-foreground">
+          <div className="px-4 py-2">{children}</div>
+        </Card>
+      </main>
+    </div>
+  );
 }
