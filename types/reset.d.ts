@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import '@total-typescript/ts-reset';
 import { z } from 'zod';
 
@@ -25,7 +27,7 @@ const envSchema = z.object({
 envSchema.parse(process.env);
 
 declare global {
-  export namespace NodeJS {
-    export interface ProcessEnv extends z.infer<typeof envSchema> {}
+  namespace NodeJS {
+    interface ProcessEnv extends z.infer<typeof envSchema> {}
   }
 }

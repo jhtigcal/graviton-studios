@@ -2,6 +2,10 @@
 
 import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+export const metadata = {
+  title: 'Dashboard',
+};
+
 function DashboardPage() {
   return (
     <>
