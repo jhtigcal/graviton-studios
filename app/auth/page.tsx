@@ -6,7 +6,13 @@ import {
 } from '@/components/ui/card';
 import UserAuthForm from '@/components/user-auth-form';
 import { getCurrentUser } from '@/lib/session';
+import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
+
+export const metadata: Metadata = {
+  title: 'Authentication',
+  description: 'Sign in to your account',
+};
 
 async function AuthPage() {
   const user = await getCurrentUser();
